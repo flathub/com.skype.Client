@@ -2,6 +2,8 @@
     "app-id": "com.skype.Client",
     "runtime": "org.freedesktop.Platform",
     "runtime-version": "1.6",
+    "base": "io.atom.electron.BaseApp",
+    "base-version": "stable",
     "branch": "stable",
     "sdk": "org.freedesktop.Sdk",
     "command": "skype",
@@ -23,81 +25,11 @@
         /* Notification access */
         "--talk-name=org.gtk.Notifications", "--talk-name=org.freedesktop.Notifications",
         "--talk-name=org.gnome.GConf",
+        "--env=XDG_CURRENT_DESKTOP=Unity",
+        "--talk-name=org.kde.StatusNotifierWatcher",
         "--extra-data=skypeforlinux-64.deb:99ed59bfc5521f643071694a23f2387dac016038776d48ab03165c2e35c5c5e4:53937734::https://repo.skype.com/latest/skypeforlinux-64.deb"
     ],
-    "build-options" : {
-        "cflags": "-O2 -g",
-        "cxxflags": "-O2 -g",
-        "env": {
-            "V": "1"
-        }
-    },
-    "cleanup": ["/include", "/lib/pkgconfig",
-                "/share/pkgconfig", "/share/aclocal",
-                "/man", "/share/man", "/share/gtk-doc",
-                "/share/vala",
-                "*.la", "*.a"],
     "modules": [
-        "shared-modules/udev/udev-175.json",
-        {
-            "name": "dbus-glib",
-            "config-opts": [ "--disable-static", "--disable-gtk-doc" ],
-            "cleanup": ["/bin", "/etc/bash_completion.d"],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://dbus.freedesktop.org/releases/dbus-glib/dbus-glib-0.106.tar.gz",
-                    "sha256": "b38952706dcf68bad9c302999ef0f420b8cf1a2428227123f0ac4764b689c046"
-                }
-            ]
-        },
-        /* skype seems to use gconf to read the proxy settings */
-        {
-
-            "name": "gconf",
-            "config-opts": ["--disable-orbit"],
-            "cleanup": ["/bin", "/libexec", "/share/dbus-1/services", "/etc/xdg/autostart"],
-            "sources" : [
-                {
-                    "type": "archive",
-                    "url": "http://ftp.gnome.org/pub/GNOME/sources/GConf/3.2/GConf-3.2.6.tar.xz",
-                    "sha256": "1912b91803ab09a5eed34d364bf09fe3a2a9c96751fde03a4e0cfa51a04d784c"
-                }
-            ]
-        },
-        {
-            "name": "libsecret",
-            "config-opts": ["--disable-gtk-doc",
-                            "--enable-introspection=no",
-                            "--disable-manpages"],
-            "cleanup": ["/bin"],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "http://ftp.gnome.org/pub/GNOME/sources/libsecret/0.18/libsecret-0.18.5.tar.xz",
-                    "sha256": "9ce7bd8dd5831f2786c935d82638ac428fa085057cc6780aba0e39375887ccb3"
-                },
-                {
-                    "type": "shell",
-                    "commands": ["autoreconf -f"]
-                }
-            ]
-        },
-        {
-            "name": "gtk2",
-            "config-opts": ["--disable-gtk-doc",
-                            "--enable-introspection=no",
-                            "--disable-man",
-                            "--with-xinput=xfree"],
-            "cleanup": ["/bin", "/share/gtk-2.0/demo"],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/gtk+/2.24/gtk+-2.24.31.tar.xz",
-                    "sha256": "68c1922732c7efc08df4656a5366dcc3afdc8791513400dac276009b40954658"
-                }
-            ]
-        },
         {
             "name": "skype",
             "buildsystem": "simple",
