@@ -29,6 +29,11 @@
         "--talk-name=org.kde.StatusNotifierWatcher",
         "--extra-data=skypeforlinux-64.deb:99ed59bfc5521f643071694a23f2387dac016038776d48ab03165c2e35c5c5e4:53937734::https://repo.skype.com/latest/skypeforlinux-64.deb"
     ],
+    "cleanup": ["/include", "/lib/pkgconfig",
+                "/share/pkgconfig", "/share/aclocal",
+                "/man", "/share/man", "/share/gtk-doc",
+                "/share/vala",
+                "*.la", "*.a"],
     "modules": [
         {
             "name": "libsecret",
