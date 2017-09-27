@@ -29,7 +29,29 @@
         "--talk-name=org.kde.StatusNotifierWatcher",
         "--extra-data=skypeforlinux-64.deb:99ed59bfc5521f643071694a23f2387dac016038776d48ab03165c2e35c5c5e4:53937734::https://repo.skype.com/latest/skypeforlinux-64.deb"
     ],
+    "cleanup": ["/include", "/lib/pkgconfig",
+                "/share/man", "/share/gtk-doc",
+                "*.la", "*.a"],
     "modules": [
+        {
+            "name": "libsecret",
+            "config-opts": ["--disable-gtk-doc",
+                            "--disable-static",
+                            "--enable-introspection=no",
+                            "--disable-man",
+                            "--with-xinput=xfree"],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://ftp.gnome.org/pub/GNOME/sources/libsecret/0.18/libsecret-0.18.5.tar.xz",
+                    "sha256": "9ce7bd8dd5831f2786c935d82638ac428fa085057cc6780aba0e39375887ccb3"
+                },
+                {
+                    "type": "shell",
+                    "commands": ["autoreconf -f"]
+                }
+            ]
+        },
         {
             "name": "skype",
             "buildsystem": "simple",
