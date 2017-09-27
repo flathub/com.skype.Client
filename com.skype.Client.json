@@ -38,6 +38,7 @@
         {
             "name": "libsecret",
             "config-opts": ["--disable-gtk-doc",
+                            "--disable-static",
                             "--enable-introspection=no",
                             "--disable-man",
                             "--with-xinput=xfree"],
