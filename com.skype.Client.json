@@ -26,8 +26,7 @@
         "--talk-name=org.gtk.Notifications", "--talk-name=org.freedesktop.Notifications",
         "--talk-name=org.gnome.GConf",
         "--env=XDG_CURRENT_DESKTOP=Unity",
-        "--talk-name=org.kde.StatusNotifierWatcher",
-        "--extra-data=skypeforlinux-64.deb:99ed59bfc5521f643071694a23f2387dac016038776d48ab03165c2e35c5c5e4:53937734::https://repo.skype.com/latest/skypeforlinux-64.deb"
+        "--talk-name=org.kde.StatusNotifierWatcher"
     ],
     "modules": [
         {
@@ -90,6 +89,13 @@
                 {
                     "type": "file",
                     "path": "com.skype.Client.appdata.xml"
+                },
+                {
+                    "type": "extra-data",
+                    "filename": "skypeforlinux-64.deb",
+                    "url": "https://repo.skype.com/latest/skypeforlinux-64.deb",
+                    "sha256": "99ed59bfc5521f643071694a23f2387dac016038776d48ab03165c2e35c5c5e4",
+                    "size": 53937734
                 }
             ],
             "build-commands": [
