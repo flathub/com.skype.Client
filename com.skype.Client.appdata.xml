@@ -7,4 +7,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LicenseRef-proprietary</project_license>
   <url type="homepage">https://www.skype.com</url>
+  <!-- These are the icons for the android apps, from https://play.google.com/store/apps/details?id=com.skype.raider -->
+  <icon type="remote" height="64" width="64">https://lh3.googleusercontent.com/QfAEt_ya6-n8w_TD9-PsghFC2DMSO7fLGNZB4cQ3RtbBbHFkXJE_gxOc3l32-j6LXg=w64</icon>
+  <icon type="remote" height="128" width="128">https://lh3.googleusercontent.com/QfAEt_ya6-n8w_TD9-PsghFC2DMSO7fLGNZB4cQ3RtbBbHFkXJE_gxOc3l32-j6LXg=w128</icon>
 </component>
