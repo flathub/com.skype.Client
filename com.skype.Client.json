@@ -17,6 +17,9 @@
         "--socket=pulseaudio",
         /* Network access */
         "--share=network",
+        /* It seems to call NM and bluez */
+        "--system-talk-name=org.freedesktop.NetworkManager",
+        "--system-talk-name=org.bluez",
         /* File system access */
         "--filesystem=xdg-download",
         "--filesystem=home:ro",
