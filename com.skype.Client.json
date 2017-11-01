@@ -56,6 +56,31 @@
                 }
             ]
         },
+        "shared-modules/udev/udev-175.json",
+        {
+            "name": "v4l-utils",
+            "config-opts": [
+                "--disable-static",
+                "--disable-doxygen-doc",
+                "--disable-libdvbv5",
+                "--disable-v4l-utils",
+                "--disable-qv4l2",
+                "--with-udevdir=/app/lib/udev/"
+            ],
+            "cleanup": [
+                "/include",
+                "/lib/pkgconfig",
+                "/share/man",
+                "*.la"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.12.5.tar.bz2",
+                    "sha256": "0618162ddb0b57fe7c45407d4d66ed79e3a134cdbc9e72598d34e61d3359e20d"
+                }
+            ]
+        },
         {
             "name": "skype",
             "buildsystem": "simple",
