@@ -115,7 +115,7 @@
                     "commands": [
                         "SKYPE_LOGS=$XDG_CONFIG_HOME/logs",
                         "mkdir -p $SKYPE_LOGS",
-                        "nohup /app/extra/share/skypeforlinux/skypeforlinux --executed-from=\"$(pwd)\" --pid=$$ \"$@\" > \"$SKYPE_LOGS/skype-startup.log\" 2>&1 &"
+                        "nohup env TMPDIR=$XDG_CACHE_HOME /app/extra/share/skypeforlinux/skypeforlinux --executed-from=\"$(pwd)\" --pid=$$ \"$@\" > \"$SKYPE_LOGS/skype-startup.log\" 2>&1 &"
                     ]
                 },
                 {
