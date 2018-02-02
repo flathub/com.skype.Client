@@ -21,6 +21,7 @@
   <icon type="remote" height="64" width="64">https://lh3.googleusercontent.com/QfAEt_ya6-n8w_TD9-PsghFC2DMSO7fLGNZB4cQ3RtbBbHFkXJE_gxOc3l32-j6LXg=w64</icon>
   <icon type="remote" height="128" width="128">https://lh3.googleusercontent.com/QfAEt_ya6-n8w_TD9-PsghFC2DMSO7fLGNZB4cQ3RtbBbHFkXJE_gxOc3l32-j6LXg=w128</icon>
   <releases>
-    <release date="2018-01-26" version="8.15.76.1"/>
+    <release date="2018-01-07" version="8.13.76.8"/>
+    <release date="2018-02-01" version="8.15.76.2"/>
   </releases>
 </component>
