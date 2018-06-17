@@ -4,14 +4,14 @@
   <name>Skype</name>
   <developer_name>Microsoft</developer_name>
   <summary>Call and message skype users, with video chat support</summary>
+  <summary xml:lang="pt_BR">Faça chamadas gratuitas pela internet e ligações baratas para telefones e celulares.</summary>
+  <summary xml:lang="es">Haz llamadas gratuitas por internet</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LicenseRef-proprietary</project_license>
   <url type="homepage">https://www.skype.com</url>
-  <description>
-    <p>Skype makes staying in touch incredibly easy and fun! 
-    If you have a webcam and a microphone, you can easily make video calls and voice calls to anyone in the world who also has Skype. 
-    This app’s features are simple to use and you can stay in touch with people anywhere in world!</p>
-  </description>
+  <description><p>Skype makes staying in touch incredibly easy and fun!If you have a webcam and a microphone, you can easily make video calls and voice calls to anyone in the world who also has Skype.This app’s features are simple to use and you can stay in touch with people anywhere in world!</p></description>
+  <description xml:lang="pt_BR"><p>Skype faz você ficar em contato facilmente e de forma divertida! Se você tiver uma webcam e um microfone, você pode facilmente fazer chamadas de vídeo e chamadas de voz para qualquer pessoa no mundo que também tem Skype. As ferramentas deste programa são simples de usar e você pode ficar em contato com pessoas em qualquer lugar no mundo!</p></description>
+  <description xml:lang="es"><p>¡Skype te ayuda a mantenerte en contacto con quien quieras! Si tienes una cámara web y un micrófono, puedes hacer llamadas de video o de voz a cualquier persona en el mundo que tenga Skype, por gratis. Ahora podrás mantenerte en contacto con todos tus seres queridos, o hasta hacer nuevos amigos en otros lugares, con solo el uso de la Internet, Skype, y un micrófono!  **Requiere Internet**.</p></description>
   <screenshots>
     <screenshot>
       <image type="source">https://secure.skypeassets.com/content/dam/scom/download/skype-for-linux.png</image>
