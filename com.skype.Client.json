@@ -1,7 +1,7 @@
 {
     "app-id": "com.skype.Client",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "1.6",
+    "runtime-version": "unstable",
     "base": "io.atom.electron.BaseApp",
     "base-version": "stable",
     "branch": "stable",
@@ -135,7 +135,7 @@
                 "install skype.sh /app/bin/skype",
                 "install -Dm644 com.skype.Client.appdata.xml /app/share/appdata/com.skype.Client.appdata.xml",
                 "cp /usr/bin/ar /app/bin",
-                "cp /usr/lib/libbfd-*.so /app/lib"
+                "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib"
             ]
         }
     ]
