@@ -25,6 +25,25 @@
   <icon type="remote" height="64" width="64">https://lh3.googleusercontent.com/QfAEt_ya6-n8w_TD9-PsghFC2DMSO7fLGNZB4cQ3RtbBbHFkXJE_gxOc3l32-j6LXg=w64</icon>
   <icon type="remote" height="128" width="128">https://lh3.googleusercontent.com/QfAEt_ya6-n8w_TD9-PsghFC2DMSO7fLGNZB4cQ3RtbBbHFkXJE_gxOc3l32-j6LXg=w128</icon>
   <releases>
+    <release date="2018-08-29" version="8.29.0.50">
+      <description>
+        <ul>
+          <li> Signed in as: Have multiple Skype or Microsoft accounts? Tap your profile picture and both your Skype Name and the account you're signed in as will be displayed.</li>
+          <li>Archive your conversations: Hide your conversations by archiving them.</li>
+          <li> Stop unwanted calls: Now, you can avoid those distractions and choose to only allow calls from your contacts to ring. </li>
+          <li> Cortana is now available in the United Kingdom </li>
+        </ul>
+      </description>
+    </release>
+    <release date="2018-08-14" version="8.28.0.41">
+      <description>
+        <ul>
+          <li> Record your calls: Introducing cloud-based Skype call recording directly from the app.</li>
+          <li> Color filters for photos: Use color filters to inject some charm into new or existing photos and delight your friends! </li>
+          <li> Spotify: Music lovers can now search for songs, albums and artists, preview, play, and share music on Spotify! Just select the Add to chat button to get started. </li>
+        </ul>
+      </description>
+    </release>
     <release date="2018-08-03" version="8.27.0.85"/>
   </releases>
 </component>
