@@ -65,6 +65,18 @@
         },
         "shared-modules/udev/udev-175.json",
         {
+            "name": "dbus-glib",
+            "config-opts": [ "--disable-static" ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://dbus.freedesktop.org/releases/dbus-glib/dbus-glib-0.108.tar.gz",
+                    "sha256": "9f340c7e2352e9cdf113893ca77ca9075d9f8d5e81476bf2bf361099383c602c"
+                }
+            ]
+        },
+        "shared-modules/libappindicator/libappindicator-gtk3-12.10.json",
+        {
             "name": "v4l-utils",
             "config-opts": [
                 "--disable-static",
