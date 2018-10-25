@@ -20,6 +20,8 @@
         /* It seems to call NM and bluez */
         "--system-talk-name=org.freedesktop.NetworkManager",
         "--system-talk-name=org.bluez",
+        /* It crashes if it can't call Inhibit on logind */
+        "--system-talk-name=org.freedesktop.login1",
         /* File system access */
         "--filesystem=xdg-download",
         "--filesystem=home:ro",
