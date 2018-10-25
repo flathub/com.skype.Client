@@ -127,9 +127,9 @@
                 {
                     "type": "extra-data",
                     "filename": "skypeforlinux-64.deb",
-                    "url": "https://repo.skype.com/deb/pool/main/s/skypeforlinux/skypeforlinux_8.29.0.50_amd64.deb",
-                    "sha256": "ae78d24115c29ff8e7e215ae561b681537194fb1997048ff2275ff9f807eb95a",
-                    "size": 73251932
+                    "url": "https://repo.skype.com/deb/pool/main/s/skypeforlinux/skypeforlinux_8.33.0.41_amd64.deb",
+                    "sha256": "bda45e1a5a60c5a1c8347eeb7ad9077925cda4d33d822a123ab7edee48aca878",
+                    "size": 73356304
                 }
             ],
             "build-commands": [
