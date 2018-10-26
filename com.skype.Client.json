@@ -2,7 +2,7 @@
     "app-id": "com.skype.Client",
     "runtime": "org.freedesktop.Platform",
     "runtime-version": "1.6",
-    "base": "io.atom.electron.BaseApp",
+    "base": "org.electronjs.Electron2.BaseApp",
     "base-version": "stable",
     "branch": "stable",
     "sdk": "org.freedesktop.Sdk",
@@ -65,7 +65,6 @@
                 }
             ]
         },
-        "shared-modules/udev/udev-175.json",
         {
             "name": "v4l-utils",
             "config-opts": [
