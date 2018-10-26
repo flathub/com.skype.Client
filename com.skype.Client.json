@@ -1,10 +1,9 @@
 {
     "app-id": "com.skype.Client",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "1.6",
+    "runtime-version": "18.08",
     "base": "org.electronjs.Electron2.BaseApp",
-    "base-version": "stable",
-    "branch": "stable",
+    "base-version": "18.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "skype",
     "separate-locales": false,
@@ -136,7 +135,7 @@
                 "install skype.sh /app/bin/skype",
                 "install -Dm644 com.skype.Client.appdata.xml /app/share/appdata/com.skype.Client.appdata.xml",
                 "cp /usr/bin/ar /app/bin",
-                "cp /usr/lib/libbfd-*.so /app/lib"
+                "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib"
             ]
         }
     ]
