@@ -26,7 +26,7 @@
   <icon type="remote" height="128" width="128">https://lh3.googleusercontent.com/QfAEt_ya6-n8w_TD9-PsghFC2DMSO7fLGNZB4cQ3RtbBbHFkXJE_gxOc3l32-j6LXg=w128</icon>
   <releases>
     <release date="2018-12-01" version="8.36.76.26">
-    <release date="2018-11-12" version="8.34.0.78">
+    <release date="2018-11-12" version="8.34.0.78"/>
       <description>
         <ul>
           <li>Switch between cameras: Easily switch between multiple cameras during a video call, just right-click or long press on your avatar to select a different camera.</li>
@@ -34,7 +34,7 @@
         </ul>
       </description>
     </release>
-    <release date="2018-10-20" version="8.33.0.41">
+    <release date="2018-10-20" version="8.33.0.41"/>
     <release date="2018-08-29" version="8.29.0.50">
       <description>
         <ul>
