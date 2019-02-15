@@ -33,7 +33,15 @@
         </ul>
       </description>
     </release>
-    <release date="2018-10-20" version="8.33.0.41"/>
+    <release date="2018-10-20" version="8.33.0.41">
+      <description>
+        <ul>
+          <li>Send message with Enter key: Change what your Enter key does while in a chat, set it to send the message or insert a new line. Go to your profile picture > Settings > Messaging.</li>
+          <li>Add a phone number as a contact: Easily add someone's phone number as a contact in Skype.</li>
+          <li>Mute and remove participants during a Skype group call: When you initiate a group call, you can mute or remove participants during the call.</li>
+        </ul>
+      </description>
+    </release>
     <release date="2018-08-29" version="8.29.0.50">
       <description>
         <ul>
