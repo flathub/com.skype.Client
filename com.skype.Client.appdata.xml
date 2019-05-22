@@ -28,7 +28,9 @@
     <release date="2019-05-16" version="8.45.0.41">
       <description>
         <ul>
-          <li>null </li>
+          <li>Skype for Web appearance settings for theme and color are now saved after you sign out.</li>
+          <li>Quick sign out: When you're using Skype for Web, you can now quickly sign out right from the footer.</li>
+          <li>Improvements to easily enable notifications for calls and messages when using Skype for Web.</li>
         </ul>
       </description>
     </release>
