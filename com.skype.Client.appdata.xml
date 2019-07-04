@@ -28,9 +28,9 @@
     <release date="2019-06-26" version="8.48.0.51">
       <description>
         <ul>
-          <li><strong>Keeping up appearances</strong>: Your appearance settings are now kept when you sign out of Skype.</li>
+          <li>Keeping up appearances: Your appearance settings are now kept when you sign out of Skype.</li>
           <li>You can now quit Skype for Windows 10 right from your system tray.</li>
-          <li><strong>Share more while taking up less space</strong>: When you share multiple images or videos, they are now collapsed into an album within your conversation. </li>
+          <li>Share more while taking up less space: When you share multiple images or videos, they are now collapsed into an album within your conversation. </li>
         </ul>
       </description>
     </release>
@@ -44,8 +44,8 @@
     <release date="2019-05-28" version="8.46.0.60">
       <description>
         <ul>
-          <li><a href="https://support.skype.com/faq/FA12230">Office 365 Skype minutes are now automatically activated.</a></li>
-          <li>Updated <a href="https://support.skype.com/faq/FA34869">startup and close options</a> for Windows desktop, Mac and Linux to give you more control over how Skype launches and runs in the background.</li>
+          <li>Office 365 Skype minutes are now automatically activated.</li>
+          <li>Updated startup and close options for Windows desktop, Mac and Linux to give you more control over how Skype launches and runs in the background.</li>
         </ul>
       </description>
     </release>
