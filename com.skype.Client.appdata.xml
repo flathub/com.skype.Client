@@ -25,6 +25,15 @@
   <icon type="remote" height="64" width="64">https://lh3.googleusercontent.com/QfAEt_ya6-n8w_TD9-PsghFC2DMSO7fLGNZB4cQ3RtbBbHFkXJE_gxOc3l32-j6LXg=w64</icon>
   <icon type="remote" height="128" width="128">https://lh3.googleusercontent.com/QfAEt_ya6-n8w_TD9-PsghFC2DMSO7fLGNZB4cQ3RtbBbHFkXJE_gxOc3l32-j6LXg=w128</icon>
   <releases>
+    <release date="2019-07-09" version="8.49.0.49">
+      <description>
+        <ul>
+          <li>Cleaner updating process for Windows users: Skype will no longer automatically add a desktop shortcut after an update. (The desktop shortcut will only be added as a fresh install).</li>
+          <li>Tired of that really annoying GIF in your chat?  Shut it down!  We added the ability to pause and play GIFs as you wish!</li>
+          <li>Bug fixes and performance improvements.</li>
+        </ul>
+      </description>      
+    </release>
     <release date="2019-06-26" version="8.48.0.51">
       <description>
         <ul>
