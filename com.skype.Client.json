@@ -91,6 +91,7 @@
         {
             "name": "skype",
             "buildsystem": "simple",
+            "only-arches": [ "x86_64" ],
             "sources" : [
                 {
                     "type": "script",
