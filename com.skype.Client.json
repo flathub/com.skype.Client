@@ -128,6 +128,13 @@
                     "url": "https://repo.skype.com/deb/pool/main/s/skypeforlinux/skypeforlinux_8.49.0.49_amd64.deb",
                     "sha256": "42e13987823c03685a4711a3722567e75d6fe774c76273c00831f139cd18b850",
                     "size": 73199698
+                    "x-checker-data": {
+                        "type": "debian-repo",
+                        "package-name": "skypeforlinux",
+                        "root": "https://repo.skype.com/deb",
+                        "dist": "stable",
+                        "component": "main"
+                    }
                 }
             ],
             "build-commands": [
