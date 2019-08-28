@@ -25,6 +25,17 @@
   <icon type="remote" height="64" width="64">https://lh3.googleusercontent.com/QfAEt_ya6-n8w_TD9-PsghFC2DMSO7fLGNZB4cQ3RtbBbHFkXJE_gxOc3l32-j6LXg=w64</icon>
   <icon type="remote" height="128" width="128">https://lh3.googleusercontent.com/QfAEt_ya6-n8w_TD9-PsghFC2DMSO7fLGNZB4cQ3RtbBbHFkXJE_gxOc3l32-j6LXg=w128</icon>
   <releases>
+    <release date="2019-08-13" version="8.51.0.72">
+      <description>
+        <ul>
+          <li>Divide and Conquer: We've added split view to Windows, Mac, and Linux, so you can keep your contact list up in one window and your conversations in another</li>
+          <li>Sharing is caring: Want to share your screen in Skype on the Web using Google Chrome? Good news, you can do that now!</li>
+          <li>Keep it simple: We've simplified the message composer to make things like video messages and polls easier to find</li>
+          <li>Before I forget: We also added the ability to bookmark messages in conversations</li>
+          <li>Bug fixes and performance improvements</li>
+        </ul>
+      </description>
+    </release>
     <release date="2019-07-22" version="8.50.0.38">
       <description>
         <ul>
