@@ -22,8 +22,11 @@
         /* It crashes if it can't call Inhibit on logind */
         "--system-talk-name=org.freedesktop.login1",
         /* File system access */
+        "--filesystem=xdg-documents",
         "--filesystem=xdg-download",
-        "--filesystem=home:ro",
+        "--filesystem=xdg-music",
+        "--filesystem=xdg-pictures",
+        "--filesystem=xdg-videos",
         /* Secrets access */
         "--talk-name=org.freedesktop.secrets",
         /* Notification access */
