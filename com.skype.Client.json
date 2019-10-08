@@ -8,31 +8,24 @@
     "command": "skype",
     "separate-locales": false,
     "finish-args": [
-        /* X11 + XShm access */
-        "--share=ipc", "--socket=x11",
-        /* Access to webcam require access to devices */
+        "--share=ipc",
+        "--socket=x11",
         "--device=all",
-        /* Sound access */
         "--socket=pulseaudio",
-        /* Network access */
         "--share=network",
-        /* It seems to call NM and bluez */
         "--system-talk-name=org.freedesktop.NetworkManager",
         "--system-talk-name=org.bluez",
-        /* It crashes if it can't call Inhibit on logind */
         "--system-talk-name=org.freedesktop.login1",
-        /* File system access */
         "--filesystem=xdg-download",
         "--filesystem=home:ro",
-        /* Secrets access */
         "--talk-name=org.freedesktop.secrets",
-        /* Notification access */
-        "--talk-name=org.gtk.Notifications", "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.gtk.Notifications",
+        "--talk-name=org.freedesktop.Notifications",
         "--talk-name=org.gnome.GConf",
         "--env=XDG_CURRENT_DESKTOP=Unity",
         "--talk-name=org.kde.StatusNotifierWatcher"
     ],
-    "build-options" : {
+    "build-options": {
         "cflags": "-O2 -g",
         "cxxflags": "-O2 -g"
     },
@@ -60,7 +53,9 @@
                 },
                 {
                     "type": "shell",
-                    "commands": ["autoreconf -f"]
+                    "commands": [
+                        "autoreconf -f"
+                    ]
                 }
             ]
         },
@@ -91,7 +86,7 @@
         {
             "name": "skype",
             "buildsystem": "simple",
-            "sources" : [
+            "sources": [
                 {
                     "type": "script",
                     "dest-filename": "apply_extra",
@@ -125,10 +120,12 @@
                 {
                     "type": "extra-data",
                     "filename": "skypeforlinux-64.deb",
-                    "url": "https://repo.skype.com/deb/pool/main/s/skypeforlinux/skypeforlinux_8.50.0.38_amd64.deb",
-                    "sha256": "c64e27057a91cc006476d174f101a758eb917d4146078e0218f73f4c2e530abc",
-                    "size": 73159502,
-                    "only-arches": [ "x86_64" ],
+                    "url": "https://repo.skype.com/deb/pool/main/s/skypeforlinux/skypeforlinux_8.53.0.85_amd64.deb",
+                    "sha256": "fbb31b857bcb0b406cb1dd42336948c2f0a04caa229b9e4b6ff6e6bc5a8a836b",
+                    "size": 79238016,
+                    "only-arches": [
+                        "x86_64"
+                    ],
                     "x-checker-data": {
                         "type": "debian-repo",
                         "package-name": "skypeforlinux",
