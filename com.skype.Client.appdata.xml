@@ -25,6 +25,7 @@
   <icon type="remote" height="64" width="64">https://lh3.googleusercontent.com/QfAEt_ya6-n8w_TD9-PsghFC2DMSO7fLGNZB4cQ3RtbBbHFkXJE_gxOc3l32-j6LXg=w64</icon>
   <icon type="remote" height="128" width="128">https://lh3.googleusercontent.com/QfAEt_ya6-n8w_TD9-PsghFC2DMSO7fLGNZB4cQ3RtbBbHFkXJE_gxOc3l32-j6LXg=w128</icon>
   <releases>
+    <release version="8.55.76.62" date="2019-11-19"/>
     <release version="8.53.0.85" date="2019-10-08"/>
     <release date="2019-08-13" version="8.51.0.72">
       <description>
