@@ -25,6 +25,19 @@
   <icon type="remote" height="64" width="64">https://lh3.googleusercontent.com/QfAEt_ya6-n8w_TD9-PsghFC2DMSO7fLGNZB4cQ3RtbBbHFkXJE_gxOc3l32-j6LXg=w64</icon>
   <icon type="remote" height="128" width="128">https://lh3.googleusercontent.com/QfAEt_ya6-n8w_TD9-PsghFC2DMSO7fLGNZB4cQ3RtbBbHFkXJE_gxOc3l32-j6LXg=w128</icon>
   <releases>
+    <release version="8.56.0.103" date="2020-01-27"/>
+    <description>
+      <ul>
+        <li>Instantly Quotable: You can now use keyboard shortcuts to copy and paste quotes on Windows and Mac. Turn it on in Settings > Messaging > Paste copied messages as quotes to try it out.</li>
+        <li>Bug fixes and stability improvements: We've fixed some issues, including:</li>
+        <ul>
+          <li>Sys tray icon should not appear offline anymore after a computer launch.</li>
+          <li>Split view should not get disabled by itself anymore.</li>
+          <li>When using split view, new messages sync now better in open chat windows.</li>
+          <li>Auto-answering working better when the app was backgrounded on desktop.</li>
+        </ul>
+      </ul>
+    </description
     <release version="8.55.0.141" date="2019-12-15"/>
     <release version="8.54.0.91" date="2019-11-13"/>
     <release version="8.53.0.85" date="2019-10-08"/>
@@ -54,7 +67,7 @@
           <li>Tired of that really annoying GIF in your chat?  Shut it down!  We added the ability to pause and play GIFs as you wish!</li>
           <li>Bug fixes and performance improvements.</li>
         </ul>
-      </description>      
+      </description>
     </release>
     <release date="2019-06-26" version="8.48.0.51">
       <description>
