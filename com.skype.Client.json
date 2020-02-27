@@ -25,10 +25,6 @@
         "--env=XDG_CURRENT_DESKTOP=Unity",
         "--talk-name=org.kde.StatusNotifierWatcher"
     ],
-    "build-options": {
-        "cflags": "-O2 -g",
-        "cxxflags": "-O2 -g"
-    },
     "modules": [
         {
             "name": "libsecret",
@@ -97,7 +93,6 @@
                         "rm -f control.tar.gz data.tar.xz debian-binary",
                         "mv usr/* .",
                         "rmdir usr",
-                        "patch-resources share/skypeforlinux/resources/app.asar",
                         "mkdir -p export/share/applications",
                         "sed -e 's/Icon=skypeforlinux/Icon=com.skype.Client/' -e 's$/usr/bin/skypeforlinux$/app/bin/skype$' share/applications/skypeforlinux.desktop > export/share/applications/com.skype.Client.desktop",
                         "echo StartupWMClass=SkypeAlpha >> export/share/applications/com.skype.Client.desktop",
@@ -111,16 +106,13 @@
                     "commands": [
                         "SKYPE_LOGS=$XDG_CONFIG_HOME/logs",
                         "mkdir -p $SKYPE_LOGS",
-                        "nohup env TMPDIR=$XDG_CACHE_HOME /app/extra/share/skypeforlinux/skypeforlinux --no-sandbox --executed-from=\"$(pwd)\" --pid=$$ \"$@\" > \"$SKYPE_LOGS/skype-startup.log\" 2>&1 &"
+                        "export TMPDIR=\"$XDG_RUNTIME_DIR/app/$FLATPAK_ID\"",
+                        "exec zypak-wrapper /app/extra/share/skypeforlinux/skypeforlinux --executed-from=\"$(pwd)\" --pid=$$ \"$@\" > \"$SKYPE_LOGS/skype-startup.log\" 2>&1"
                     ]
                 },
                 {
                     "type": "file",
                     "path": "com.skype.Client.appdata.xml"
-                },
-                {
-                    "type": "file",
-                    "path": "patch-resources.py"
                 },
                 {
                     "type": "extra-data",
@@ -144,7 +136,6 @@
                 "install apply_extra /app/bin",
                 "install skype.sh /app/bin/skype",
                 "install -Dm644 com.skype.Client.appdata.xml /app/share/appdata/com.skype.Client.appdata.xml",
-                "install -Dm755 patch-resources.py /app/bin/patch-resources",
                 "cp /usr/bin/ar /app/bin",
                 "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib"
             ]
