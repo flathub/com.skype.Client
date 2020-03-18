@@ -46,8 +46,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.12.5.tar.bz2",
-                    "sha256": "0618162ddb0b57fe7c45407d4d66ed79e3a134cdbc9e72598d34e61d3359e20d"
+                    "url": "https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.18.0.tar.bz2",
+                    "sha256": "6cb60d822eeed20486a03cc23e0fc65956fbc1e85e0c1a7477f68bbd9802880d"
                 }
             ]
         },
@@ -68,8 +68,7 @@
                         "mkdir -p export/share/applications",
                         "sed -e 's/Icon=skypeforlinux/Icon=com.skype.Client/' -e 's$/usr/bin/skypeforlinux$/app/bin/skype$' share/applications/skypeforlinux.desktop > export/share/applications/com.skype.Client.desktop",
                         "echo StartupWMClass=SkypeAlpha >> export/share/applications/com.skype.Client.desktop",
-                        "mkdir -p export/share/icons/hicolor/256x256/apps",
-                        "cp share/icons/hicolor/256x256/apps/skypeforlinux.png export/share/icons/hicolor/256x256/apps/com.skype.Client.png"
+                        "for s in {16,32,256,512}; do mkdir -p \"export/share/icons/hicolor/${s}x${s}/apps\"; install -p -Dm644 \"share/icons/hicolor/${s}x${s}/apps/skypeforlinux.png\" \"export/share/icons/hicolor/${s}x${s}/apps/com.skype.Client.png\"; done;"
                     ]
                 },
                 {
