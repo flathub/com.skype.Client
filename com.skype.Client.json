@@ -106,7 +106,7 @@
             "build-commands": [
                 "install apply_extra /app/bin",
                 "install skype.sh /app/bin/skype",
-                "install -Dm644 com.skype.Client.appdata.xml /app/share/appdata/com.skype.Client.appdata.xml",
+                "install -Dm644 com.skype.Client.appdata.xml /app/share/appdata/{$FLATPAK_ID}.appdata.xml",
                 "cp /usr/bin/ar /app/bin",
                 "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib"
             ]
