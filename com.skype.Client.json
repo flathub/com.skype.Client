@@ -171,9 +171,9 @@
                 "install -Dm644 com.skype.Client.appdata.xml /app/share/appdata/com.skype.Client.appdata.xml",
                 "cp /usr/bin/ar /app/bin",
                 "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib",
-                "for s in {16,32,256,512}; do mkdir -p \"app/share/icons/hicolor/${s}x${s}/apps\"; install -p -Dm644 \"icon${s}.png\" \"app/share/icons/hicolor/${s}x${s}/apps/com.skype.Client.png\"; done;",
-                "mkdir -p \"app/share/icons/hicolor/128x128/apps\"",
-                "convert -background none -density 1024 -resize \"128x128\" \"app/share/icons/hicolor/512x512/apps/com.skype.Client.png\" \"app/share/icons/hicolor/128x128/apps/com.skype.Client.png\""
+                "for s in {16,32,256,512}; do mkdir -p \"/app/share/icons/hicolor/${s}x${s}/apps\"; install -p -Dm644 \"icon${s}.png\" \"/app/share/icons/hicolor/${s}x${s}/apps/com.skype.Client.png\"; done;",
+                "mkdir -p \"/app/share/icons/hicolor/128x128/apps\"",
+                "convert -background none -density 1024 -resize \"128x128\" \"/app/share/icons/hicolor/512x512/apps/com.skype.Client.png\" \"/app/share/icons/hicolor/128x128/apps/com.skype.Client.png\""
             ]
         }
     ]
