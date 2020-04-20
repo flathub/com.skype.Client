@@ -52,6 +52,53 @@
             ]
         },
         {
+            "name": "imagemagick",
+            "config-opts": [
+                "--disable-dependency-tracking",
+                "--enable-static=no",
+                "--disable-docs",
+                "--without-magick-plus-plus",
+                "--without-bzlib",
+                "--with-x=no",
+                "--without-zlib",
+                "--without-zstd",
+                "--without-dps",
+                "--without-fftw",
+                "--without-flif",
+                "--without-fpx",
+                "--without-djvu",
+                "--without-fontconfig",
+                "--without-freetype",
+                "--without-raqm",
+                "--with-gvc=no",
+                "--without-heic",
+                "--without-jbig",
+                "--without-jpeg",
+                "--without-lcms",
+                "--without-openjp2",
+                "--without-lqr",
+                "--without-lzma",
+                "--without-openexr",
+                "--without-pango",
+                "--without-raw",
+                "--without-tiff",
+                "--without-webp",
+                "--with-wmf=no",
+                "--without-xml"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/ImageMagick/ImageMagick",
+                    "tag": "7.0.10-6",
+                    "commit": "bd31d4dde6e2b6a4f8b1033243495226a92bfc18"
+                }
+            ],
+            "cleanup": [
+                "*"
+            ]
+        },
+        {
             "name": "skype",
             "buildsystem": "simple",
             "sources": [
@@ -124,7 +171,8 @@
                 "install -Dm644 com.skype.Client.appdata.xml /app/share/appdata/com.skype.Client.appdata.xml",
                 "cp /usr/bin/ar /app/bin",
                 "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib",
-                "for s in {16,32,256,512}; do mkdir -p \"export/share/icons/hicolor/${s}x${s}/apps\"; install -p -Dm644 \"icon${s}.png\" \"export/share/icons/hicolor/${s}x${s}/apps/com.skype.Client.png\"; done;"
+                "for s in {16,32,256,512}; do mkdir -p \"export/share/icons/hicolor/${s}x${s}/apps\"; install -p -Dm644 \"icon${s}.png\" \"export/share/icons/hicolor/${s}x${s}/apps/com.skype.Client.png\"; done;",
+                "convert -background none -density 1024 -resize \"128x$128\" \"export/share/icons/hicolor/512x512/apps/com.skype.Client.png\" \"export/share/icons/hicolor/128x128/apps/com.skype.Client.png\""
             ]
         }
     ]
