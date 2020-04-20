@@ -68,7 +68,6 @@
                         "mkdir -p export/share/applications",
                         "sed -e 's/Icon=skypeforlinux/Icon=com.skype.Client/' -e 's$/usr/bin/skypeforlinux$/app/bin/skype$' share/applications/skypeforlinux.desktop > export/share/applications/com.skype.Client.desktop",
                         "echo StartupWMClass=SkypeAlpha >> export/share/applications/com.skype.Client.desktop",
-                        "for s in {16,32,256,512}; do mkdir -p \"export/share/icons/hicolor/${s}x${s}/apps\"; install -p -Dm644 \"share/icons/hicolor/${s}x${s}/apps/skypeforlinux.png\" \"export/share/icons/hicolor/${s}x${s}/apps/com.skype.Client.png\"; done;"
                     ]
                 },
                 {
@@ -80,6 +79,22 @@
                         "export TMPDIR=\"$XDG_RUNTIME_DIR/app/$FLATPAK_ID\"",
                         "exec zypak-wrapper /app/extra/share/skypeforlinux/skypeforlinux --executed-from=\"$(pwd)\" --pid=$$ \"$@\" > \"$SKYPE_LOGS/skype-startup.log\" 2>&1"
                     ]
+                },
+                {
+                    "type": "file",
+                    "path": "icon16.png"
+                },
+                {
+                    "type": "file",
+                    "path": "icon32.png"
+                },
+                {
+                    "type": "file",
+                    "path": "icon256.png"
+                },
+                {
+                    "type": "file",
+                    "path": "icon512.png"
                 },
                 {
                     "type": "file",
@@ -108,7 +123,8 @@
                 "install skype.sh /app/bin/skype",
                 "install -Dm644 com.skype.Client.appdata.xml /app/share/appdata/com.skype.Client.appdata.xml",
                 "cp /usr/bin/ar /app/bin",
-                "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib"
+                "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib",
+                "for s in {16,32,256,512}; do mkdir -p \"export/share/icons/hicolor/${s}x${s}/apps\"; install -p -Dm644 \"icon${s}.png\" \"export/share/icons/hicolor/${s}x${s}/apps/com.skype.Client.png\"; done;"
             ]
         }
     ]
