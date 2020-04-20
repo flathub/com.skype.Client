@@ -67,7 +67,7 @@
                         "rmdir usr",
                         "mkdir -p export/share/applications",
                         "sed -e 's/Icon=skypeforlinux/Icon=com.skype.Client/' -e 's$/usr/bin/skypeforlinux$/app/bin/skype$' share/applications/skypeforlinux.desktop > export/share/applications/com.skype.Client.desktop",
-                        "echo StartupWMClass=SkypeAlpha >> export/share/applications/com.skype.Client.desktop",
+                        "echo StartupWMClass=SkypeAlpha >> export/share/applications/com.skype.Client.desktop"
                     ]
                 },
                 {
