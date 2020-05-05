@@ -125,7 +125,7 @@
                 "install -Dm644 com.skype.Client.appdata.xml /app/share/appdata/com.skype.Client.appdata.xml",
                 "install -Dm644 skypeforlinux.desktop /app/share/applications/com.skype.Client.desktop",
                 "desktop-file-edit --set-key=Icon --set-value=${FLATPAK_ID} /app/share/applications/com.skype.Client.desktop",
-                "desktop-file-edit --set-key=Exec --set-value='/app/bin/skype %U' /app/share/applications/com.skype.Client.desktop",
+                "sed -e 's$/usr/bin/skypeforlinux$/app/bin/skype$' /app/share/applications/com.skype.Client.desktop",
                 "echo StartupWMClass=SkypeAlpha >> /app/share/applications/com.skype.Client.desktop",
                 "cp /usr/bin/ar /app/bin",
                 "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib",
