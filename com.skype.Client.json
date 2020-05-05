@@ -23,7 +23,8 @@
         "--talk-name=org.freedesktop.Notifications",
         "--talk-name=org.gnome.GConf",
         "--env=XDG_CURRENT_DESKTOP=Unity",
-        "--talk-name=org.kde.StatusNotifierWatcher"
+        "--talk-name=org.kde.StatusNotifierWatcher",
+        "--talk-name=com.canonical.AppMenu.Registrar"
     ],
     "modules": [
         "shared-modules/libsecret/libsecret.json",
