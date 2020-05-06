@@ -55,6 +55,13 @@
         {
             "name": "skype",
             "buildsystem": "simple",
+            "build-commands": [
+                "install apply_extra /app/bin",
+                "install skype.sh /app/bin/skype",
+                "install -Dm644 com.skype.Client.appdata.xml /app/share/appdata/com.skype.Client.appdata.xml",
+                "cp /usr/bin/ar /app/bin",
+                "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib"
+            ],
             "sources": [
                 {
                     "type": "script",
@@ -65,7 +72,11 @@
                         "tar xf data.tar.xz",
                         "rm -f control.tar.gz data.tar.xz debian-binary",
                         "mv usr/* .",
-                        "rmdir usr"
+                        "rmdir usr",
+                        "mkdir -p export/share/applications",
+                        "sed -e 's/Icon=skypeforlinux/Icon=com.skype.Client/' -e 's$/usr/bin/skypeforlinux$/app/bin/skype$' share/applications/skypeforlinux.desktop > export/share/applications/com.skype.Client.desktop",
+                        "echo StartupWMClass=SkypeAlpha >> export/share/applications/com.skype.Client.desktop",
+                        "for s in {16,32,256,512}; do mkdir -p \"export/share/icons/hicolor/${s}x${s}/apps\"; install -p -Dm644 \"share/icons/hicolor/${s}x${s}/apps/skypeforlinux.png\" \"export/share/icons/hicolor/${s}x${s}/apps/com.skype.Client.png\"; done;"
                     ]
                 },
                 {
@@ -80,27 +91,7 @@
                 },
                 {
                     "type": "file",
-                    "path": "icon16.png"
-                },
-                {
-                    "type": "file",
-                    "path": "icon32.png"
-                },
-                {
-                    "type": "file",
-                    "path": "icon256.png"
-                },
-                {
-                    "type": "file",
-                    "path": "icon512.png"
-                },
-                {
-                    "type": "file",
                     "path": "com.skype.Client.appdata.xml"
-                },
-                {
-                    "type": "file",
-                    "path": "skypeforlinux.desktop"
                 },
                 {
                     "type": "extra-data",
@@ -119,18 +110,6 @@
                         "component": "main"
                     }
                 }
-            ],
-            "build-commands": [
-                "install apply_extra /app/bin",
-                "install skype.sh /app/bin/skype",
-                "install -Dm644 com.skype.Client.appdata.xml /app/share/appdata/com.skype.Client.appdata.xml",
-                "install -Dm644 skypeforlinux.desktop /app/share/applications/com.skype.Client.desktop",
-                "desktop-file-edit --set-key=Icon --set-value=${FLATPAK_ID} /app/share/applications/com.skype.Client.desktop",
-                "sed -i -e 's$/usr/bin/skypeforlinux$/app/bin/skype$' /app/share/applications/com.skype.Client.desktop",
-                "echo StartupWMClass=SkypeAlpha >> /app/share/applications/com.skype.Client.desktop",
-                "cp /usr/bin/ar /app/bin",
-                "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib",
-                "for s in {16,32,256,512}; do mkdir -p \"/app/share/icons/hicolor/${s}x${s}/apps\"; install -p -Dm644 \"icon${s}.png\" \"/app/share/icons/hicolor/${s}x${s}/apps/com.skype.Client.png\"; done;"
             ]
         }
     ]
