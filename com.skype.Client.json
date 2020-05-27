@@ -96,7 +96,7 @@
                 {
                     "type": "extra-data",
                     "filename": "skypeforlinux-64.deb",
-                    "url": "https://repo.skype.com/deb/pool/main/s/skypeforlinux/skypeforlinux_8.60.0.76_amd64.deb",
+                    "url": "http://mirror.cs.uchicago.edu/skype/pool/main/s/skypeforlinux/skypeforlinux_8.60.0.76_amd64.deb",
                     "sha256": "ead8a9f8c5380df15f0b12f07c1f46c04f7e6b3cc15207d28dfb0406e24c21f9",
                     "size": 80438796,
                     "only-arches": [
