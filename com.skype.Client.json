@@ -69,8 +69,8 @@
                     "commands": [
                         "ar x skypeforlinux-64.deb",
                         "rm -f skypeforlinux-64.deb",
-                        "tar xf data.tar.xz",
-                        "rm -f control.tar.gz data.tar.xz debian-binary",
+                        "tar xf data.tar.gz",
+                        "rm -f control.tar.gz data.tar.gz debian-binary",
                         "mv usr/* .",
                         "rmdir usr",
                         "mkdir -p export/share/applications",
