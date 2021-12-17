@@ -10,6 +10,7 @@
     "finish-args": [
         "--share=ipc",
         "--socket=x11",
+        "--socket=wayland",
         "--device=all",
         "--socket=pulseaudio",
         "--share=network",
@@ -86,7 +87,11 @@
                         "SKYPE_LOGS=$XDG_CONFIG_HOME/logs",
                         "mkdir -p $SKYPE_LOGS",
                         "export TMPDIR=\"$XDG_RUNTIME_DIR/app/$FLATPAK_ID\"",
-                        "exec zypak-wrapper /app/extra/share/skypeforlinux/skypeforlinux --executed-from=\"$(pwd)\" --pid=$$ \"$@\" > \"$SKYPE_LOGS/skype-startup.log\" 2>&1"
+                        "if [ ! -e $XDG_RUNTIME_DIR/$WAYLAND_DISPLAY ]; then",
+                        "exec zypak-wrapper /app/extra/share/skypeforlinux/skypeforlinux --executed-from=\"$(pwd)\" --pid=$$ \"$@\" > \"$SKYPE_LOGS/skype-startup.log\" 2>&1",
+                        "else",
+                        "exec zypak-wrapper /app/extra/share/skypeforlinux/skypeforlinux --executed-from=\"$(pwd)\" --pid=$$ \"$@\" --enable-features=UseOzonePlatform -ozone-platform=wayland > \"$SKYPE_LOGS/skype-startup.log\" 2>&1",
+                        "fi"
                     ]
                 },
                 {
