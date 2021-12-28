@@ -22,6 +22,7 @@
         "--talk-name=org.gtk.Notifications",
         "--talk-name=org.freedesktop.Notifications",
         "--talk-name=org.gnome.GConf",
+        "--talk-name=org.freedesktop.ScreenSaver",
         "--env=XDG_CURRENT_DESKTOP=Unity",
         "--talk-name=org.kde.StatusNotifierWatcher",
         "--talk-name=com.canonical.AppMenu.Registrar"
