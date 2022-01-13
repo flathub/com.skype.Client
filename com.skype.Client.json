@@ -68,7 +68,7 @@
                     "type": "script",
                     "dest-filename": "apply_extra",
                     "commands": [
-                        "ar x skypeforlinux-64.deb",
+                        "LD_LIBRARY_PATH=\"/app/lib\" ar x skypeforlinux-64.deb",
                         "rm -f skypeforlinux-64.deb",
                         "tar xf data.tar.gz",
                         "rm -f control.tar.gz data.tar.gz debian-binary",
