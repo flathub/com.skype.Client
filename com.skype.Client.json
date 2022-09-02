@@ -23,6 +23,7 @@
         "--talk-name=org.gtk.Notifications",
         "--talk-name=org.freedesktop.Notifications",
         "--talk-name=org.gnome.GConf",
+        "--talk-name=org.freedesktop.ScreenSaver",
         "--env=XDG_CURRENT_DESKTOP=Unity",
         "--talk-name=org.kde.StatusNotifierWatcher",
         "--talk-name=com.canonical.AppMenu.Registrar"
@@ -68,7 +69,7 @@
                     "type": "script",
                     "dest-filename": "apply_extra",
                     "commands": [
-                        "ar x skypeforlinux-64.deb",
+                        "LD_LIBRARY_PATH=\"/app/lib\" ar x skypeforlinux-64.deb",
                         "rm -f skypeforlinux-64.deb",
                         "tar xf data.tar.gz",
                         "rm -f control.tar.gz data.tar.gz debian-binary",
@@ -101,9 +102,9 @@
                 {
                     "type": "extra-data",
                     "filename": "skypeforlinux-64.deb",
-                    "url": "https://repo.skype.com/deb/pool/main/s/skypeforlinux/skypeforlinux_8.79.0.95_amd64.deb",
-                    "sha256": "6ba66d800d1c300b8d5505807a22032769e83e15e357c28f13c89b90647b0e7b",
-                    "size": 117978308,
+                    "url": "https://repo.skype.com/deb/pool/main/s/skypeforlinux/skypeforlinux_8.88.0.401_amd64.deb",
+                    "sha256": "785f7e3396c191c18f4baf34c5122b033084039e3c1c07c0a9e9692ac921b61f",
+                    "size": 125698444,
                     "only-arches": [
                         "x86_64"
                     ],
