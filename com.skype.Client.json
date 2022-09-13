@@ -63,6 +63,7 @@
                 "install apply_extra /app/bin",
                 "install skype.sh /app/bin/skype",
                 "install -Dm644 com.skype.Client.appdata.xml /app/share/appdata/com.skype.Client.appdata.xml",
+                "for s in {16,32,128,256,512}; do install -Dm644 ${s}x${s}.png /app/share/icons/hicolor/${s}x${s}/apps/com.skype.Client.png; done;",
                 "cp /usr/bin/ar /app/bin",
                 "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib"
             ],
@@ -79,8 +80,7 @@
                         "rmdir usr",
                         "mkdir -p export/share/applications",
                         "sed -e 's/Icon=skypeforlinux/Icon=com.skype.Client/' -e 's$/usr/bin/skypeforlinux$/app/bin/skype$' share/applications/skypeforlinux.desktop > export/share/applications/com.skype.Client.desktop",
-                        "echo StartupWMClass=SkypeAlpha >> export/share/applications/com.skype.Client.desktop",
-                        "for s in {16,32,256,512}; do mkdir -p \"export/share/icons/hicolor/${s}x${s}/apps\"; install -p -Dm644 \"share/icons/hicolor/${s}x${s}/apps/skypeforlinux.png\" \"export/share/icons/hicolor/${s}x${s}/apps/com.skype.Client.png\"; done;"
+                        "echo StartupWMClass=SkypeAlpha >> export/share/applications/com.skype.Client.desktop"
                     ]
                 },
                 {
@@ -96,6 +96,26 @@
                 {
                     "type": "file",
                     "path": "com.skype.Client.appdata.xml"
+                },
+                {
+                    "type": "file",
+                    "path": "icons/16x16.png"
+                },
+                {
+                    "type": "file",
+                    "path": "icons/32x32.png"
+                },
+                {
+                    "type": "file",
+                    "path": "icons/128x128.png"
+                },
+                {
+                    "type": "file",
+                    "path": "icons/256x256.png"
+                },
+                {
+                    "type": "file",
+                    "path": "icons/512x512.png"
                 },
                 {
                     "type": "extra-data",
