@@ -27,6 +27,7 @@
   <icon type="remote" height="256" width="256">https://lh3.googleusercontent.com/QfAEt_ya6-n8w_TD9-PsghFC2DMSO7fLGNZB4cQ3RtbBbHFkXJE_gxOc3l32-j6LXg=w256</icon>
   <icon type="remote" height="512" width="512">https://lh3.googleusercontent.com/QfAEt_ya6-n8w_TD9-PsghFC2DMSO7fLGNZB4cQ3RtbBbHFkXJE_gxOc3l32-j6LXg=w512</icon>
   <releases>
+    <release version="8.96.0.207" date="2023-03-27"/>
     <release version="8.95.0.408" date="2023-03-16"/>
     <release version="8.94.0.428" date="2023-02-28"/>
     <release version="8.94.0.422" date="2023-02-17"/>
