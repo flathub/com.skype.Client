@@ -60,13 +60,13 @@
             "name": "skype",
             "buildsystem": "simple",
             "build-commands": [
-                "install apply_extra /app/bin",
-                "install skype.sh /app/bin/skype",
-                "install -Dm644 com.skype.Client.appdata.xml /app/share/appdata/com.skype.Client.appdata.xml",
-                "cp /usr/bin/ar /app/bin",
-                "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib"
+                "install apply_extra ${FLATPAK_DEST}/bin",
+                "install skype.sh ${FLATPAK_DEST}/bin/skype",
+                "install -Dm644 ${FLATPAK_ID}.appdata.xml ${FLATPAK_DEST}/share/appdata/${FLATPAK_ID}.appdata.xml",
+                "cp /usr/bin/ar ${FLATPAK_DEST}/bin",
+                "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so ${FLATPAK_DEST}/lib",
                 "install -Dm644 -t ${FLATPAK_DEST}/share/applications/ ${FLATPAK_ID}.desktop",
-                "install -Dm644 -t ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/ ${FLATPAK_ID}.png",
+                "install -Dm644 -t ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/ ${FLATPAK_ID}.png"
             ],
             "sources": [
                 {
