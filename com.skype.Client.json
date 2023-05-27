@@ -65,6 +65,8 @@
                 "install -Dm644 com.skype.Client.appdata.xml /app/share/appdata/com.skype.Client.appdata.xml",
                 "cp /usr/bin/ar /app/bin",
                 "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib"
+                "install -Dm644 -t ${FLATPAK_DEST}/share/applications/ ${FLATPAK_ID}.desktop",
+                "install -Dm644 -t ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/ ${FLATPAK_ID}.png",
             ],
             "sources": [
                 {
@@ -76,11 +78,7 @@
                         "tar xf data.tar.gz",
                         "rm -f control.tar.gz data.tar.gz debian-binary",
                         "mv usr/* .",
-                        "rmdir usr",
-                        "mkdir -p export/share/applications",
-                        "sed -e 's/Icon=skypeforlinux/Icon=com.skype.Client/' -e 's$/usr/bin/skypeforlinux$/app/bin/skype$' share/applications/skypeforlinux.desktop > export/share/applications/com.skype.Client.desktop",
-                        "echo StartupWMClass=SkypeAlpha >> export/share/applications/com.skype.Client.desktop",
-                        "for s in {16,32,256,512}; do mkdir -p \"export/share/icons/hicolor/${s}x${s}/apps\"; install -p -Dm644 \"share/icons/hicolor/${s}x${s}/apps/skypeforlinux.png\" \"export/share/icons/hicolor/${s}x${s}/apps/com.skype.Client.png\"; done;"
+                        "rmdir usr"
                     ]
                 },
                 {
@@ -96,6 +94,14 @@
                 {
                     "type": "file",
                     "path": "com.skype.Client.appdata.xml"
+                },
+                {
+                    "type": "file",
+                    "path": "com.skype.Client.png"
+                },
+                {
+                    "type": "file",
+                    "path": "com.skype.Client.desktop"
                 },
                 {
                     "type": "extra-data",
