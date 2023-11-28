@@ -22,6 +22,7 @@
     <category>Network</category>
   </categories>
   <releases>
+    <release version="8.109.0.209" date="2023-11-28"/>
     <release version="8.108.0.205" date="2023-11-09"/>
     <release version="8.107.0.215" date="2023-11-01"/>
     <release version="8.106.0.212" date="2023-10-18"/>
