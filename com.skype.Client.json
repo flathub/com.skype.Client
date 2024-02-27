@@ -1,9 +1,9 @@
 {
     "app-id": "com.skype.Client",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "22.08",
+    "runtime-version": "23.08",
     "base": "org.electronjs.Electron2.BaseApp",
-    "base-version": "22.08",
+    "base-version": "23.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "skype",
     "separate-locales": false,
@@ -63,7 +63,6 @@
                 "install apply_extra ${FLATPAK_DEST}/bin",
                 "install skype.sh ${FLATPAK_DEST}/bin/skype",
                 "install -Dm644 ${FLATPAK_ID}.appdata.xml ${FLATPAK_DEST}/share/appdata/${FLATPAK_ID}.appdata.xml",
-                "cp /usr/bin/ar ${FLATPAK_DEST}/bin",
                 "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so ${FLATPAK_DEST}/lib",
                 "install -Dm644 -t ${FLATPAK_DEST}/share/applications/ ${FLATPAK_ID}.desktop",
                 "install -Dm644 -t ${FLATPAK_DEST}/share/icons/hicolor/128x128/apps/ ${FLATPAK_ID}.png"
@@ -73,12 +72,10 @@
                     "type": "script",
                     "dest-filename": "apply_extra",
                     "commands": [
-                        "LD_LIBRARY_PATH=\"/app/lib\" ar x skypeforlinux-64.deb",
-                        "rm -f skypeforlinux-64.deb",
-                        "tar xf data.tar.gz",
-                        "rm -f control.tar.gz data.tar.gz debian-binary",
-                        "mv usr/* .",
-                        "rmdir usr"
+                        "unsquashfs skypeforlinux.snap",
+                        "rm skypeforlinux.snap",
+                        "mv squashfs-root/usr/share/skypeforlinux skypeforlinux",
+                        "touch skypeforlinux/chrome-sandbox && chmod +x skypeforlinux/chrome-sandbox"
                     ]
                 },
                 {
@@ -88,7 +85,7 @@
                         "SKYPE_LOGS=$XDG_CONFIG_HOME/logs",
                         "mkdir -p $SKYPE_LOGS",
                         "export TMPDIR=\"$XDG_RUNTIME_DIR/app/$FLATPAK_ID\"",
-                        "exec zypak-wrapper /app/extra/share/skypeforlinux/skypeforlinux --executed-from=\"$(pwd)\" --pid=$$ \"$@\" > \"$SKYPE_LOGS/skype-startup.log\" 2>&1"
+                        "exec zypak-wrapper /app/extra/skypeforlinux/skypeforlinux --executed-from=\"$(pwd)\" --pid=$$ \"$@\" > \"$SKYPE_LOGS/skype-startup.log\" 2>&1"
                     ]
                 },
                 {
@@ -105,19 +102,17 @@
                 },
                 {
                     "type": "extra-data",
-                    "filename": "skypeforlinux-64.deb",
-                    "url": "https://repo.skype.com/deb/pool/main/s/skypeforlinux/skypeforlinux_8.109.0.209_amd64.deb",
-                    "sha256": "3e66c37bc63b9767f80762c6e9e9377789247d97603395f72ee6e2b8a437e0fb",
-                    "size": 122062452,
+                    "filename": "skypeforlinux.snap",
+                    "url": "https://api.snapcraft.io/api/v1/snaps/download/QRDEfjn4WJYnm0FzDKwqqRZZI77awQEV_330.snap",
+                    "sha256": "ab0cc12e3967b991c8b059060449ab4fb5add3a8f2299f72c97f3fd7af8c0b05",
+                    "size": 189112320,
                     "only-arches": [
                         "x86_64"
                     ],
                     "x-checker-data": {
-                        "type": "debian-repo",
-                        "package-name": "skypeforlinux",
-                        "root": "https://repo.skype.com/deb",
-                        "dist": "stable",
-                        "component": "main"
+                        "type": "snapcraft",
+                        "name": "skype",
+                        "channel": "stable"
                     }
                 }
             ]
