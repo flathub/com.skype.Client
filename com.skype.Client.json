@@ -32,6 +32,8 @@
     ],
     "modules": [
         "shared-modules/libsecret/libsecret.json",
+        "shared-modules/lzo/lzo.json",
+        "shared-modules/squashfs-tools/squashfs-tools.json",        
         {
             "name": "v4l-utils",
             "config-opts": [
