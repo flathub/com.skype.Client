@@ -13,7 +13,7 @@
     This app’s features are simple to use and you can stay in touch with people anywhere in world!</p>
   </description>
   <screenshots>
-    <screenshot>
+    <screenshot type="default">
       <image type="source">https://secure.skypeassets.com/content/dam/scom/download/skype-for-linux.png</image>
     </screenshot>
   </screenshots>
