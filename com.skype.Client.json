@@ -33,7 +33,7 @@
     "modules": [
         "shared-modules/libsecret/libsecret.json",
         "shared-modules/lzo/lzo.json",
-        "shared-modules/squashfs-tools/squashfs-tools.json",        
+        "shared-modules/squashfs-tools/squashfs-tools.json",
         {
             "name": "v4l-utils",
             "config-opts": [
@@ -105,9 +105,9 @@
                 {
                     "type": "extra-data",
                     "filename": "skypeforlinux.snap",
-                    "url": "https://api.snapcraft.io/api/v1/snaps/download/QRDEfjn4WJYnm0FzDKwqqRZZI77awQEV_330.snap",
-                    "sha256": "ab0cc12e3967b991c8b059060449ab4fb5add3a8f2299f72c97f3fd7af8c0b05",
-                    "size": 189112320,
+                    "url": "https://api.snapcraft.io/api/v1/snaps/download/QRDEfjn4WJYnm0FzDKwqqRZZI77awQEV_345.snap",
+                    "sha256": "e0a6b4ed007f57125de0ad98e26232e0bc8bfc63543181ad02f887bb36b8434f",
+                    "size": 186773504,
                     "only-arches": [
                         "x86_64"
                     ],
