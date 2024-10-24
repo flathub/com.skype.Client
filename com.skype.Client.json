@@ -105,9 +105,9 @@
                 {
                     "type": "extra-data",
                     "filename": "skypeforlinux.snap",
-                    "url": "https://api.snapcraft.io/api/v1/snaps/download/QRDEfjn4WJYnm0FzDKwqqRZZI77awQEV_368.snap",
-                    "sha256": "abee4a32366bd7f1e42cc0d4b991efc8de07922f9d0110be5ae6e136840c3855",
-                    "size": 190820352,
+                    "url": "https://api.snapcraft.io/api/v1/snaps/download/QRDEfjn4WJYnm0FzDKwqqRZZI77awQEV_370.snap",
+                    "sha256": "49c541e45bc9731f8452a762826a09d0c450a218368f1af0c2c73d6ecd741bd0",
+                    "size": 190844928,
                     "only-arches": [
                         "x86_64"
                     ],
