@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Skype
 Comment=Skype Internet Telephony
-Exec=/app/bin/skype %U
+Exec=/app/bin/skype --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=auto -enable-wayland-ime %U
 Icon=com.skype.Client
 Terminal=false
 Type=Application
